@@ -16,6 +16,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .mobile-item {
+        display: none;
+    }
 }
 
 .header__catalog {
@@ -33,6 +36,7 @@
     img {
         filter: invert(47%) sepia(77%) saturate(2460%) hue-rotate(351deg) brightness(104%) contrast(92%);
     }
+
 
     &:hover {
         color: $clr-text-white-900;
@@ -176,6 +180,7 @@
         font-weight: $fw-semibold;
         line-height: 1.87em; 
         position: relative;
+        margin-right: 20px;;
     }
 }
 
@@ -207,6 +212,7 @@
     justify-content: space-between;
     & > img {
         width: 48%;
+        object-fit: contain;
     }
 }
 
@@ -242,6 +248,7 @@
 // Collaborators section
 
 .collaborators__container {
+    margin-bottom: 120px;
     h2 {
         margin-bottom: 30px;
     }
@@ -251,4 +258,174 @@
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
+}
+.about-company-image-new {
+    display: none;
+}
+
+@media (max-width: 1920px) {
+
+}
+
+@media (max-width: 1600px) {
+    .container {
+        padding-right: 10vw;
+        padding-left: 10vw;
+    }
+    .header__container2 {
+        & > span {
+            display: none;
+        }
+    }
+    .collaborators__logos-wrapper {
+        img {
+            width: 238px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .collaborators__logos-wrapper {
+        img {
+            width: 230px;
+        }
+    }
+    .container {
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
+    .about__text-wrapper {
+        p:first-of-type {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding-right: 45px;
+        padding-left: 45px;
+    }
+
+    .collaborators__logos-wrapper {
+        img {
+            width: 190px;
+        }
+    }
+    .header__catalog {
+        padding: 11px 16px;
+        span {
+            display: none;
+        }
+    }
+
+    .header__search-input {
+        width: 40%;
+        height: 44px;
+    }
+    .social-and-contacts__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: min-content;
+        padding: 7px 12px;
+        & > span {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header__container {
+        .mobile-item {
+            display: block;
+            filter: invert(47%) sepia(77%) saturate(2460%) hue-rotate(351deg) brightness(104%) contrast(92%);
+            cursor: pointer;
+        }
+        .mobile-item1 {
+            width: 40px;
+        }
+
+        .mobile-item2 {
+            width: 40px;
+        }
+    }
+
+    .header__catalog {
+        display: none;
+    }
+
+    .header__search-input {
+        display: none;
+    }
+    .header__user-specific-nav {
+        display: none;
+    }
+    .header__container2 {
+        display: none;
+    }
+
+    .about__text-wrapper {
+        align-items: center;
+        width: 100%;
+    }
+    .about__container {
+        flex-direction: column;
+    }
+    .about__text-wrapper > span {
+        display: none;
+    }
+    .about-company-image-new {
+        display: inline-block;
+        object-fit: contain;
+        width: 100%;
+    }
+    .about-company-image {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 25px;
+        padding-right: 25px;;
+    }
+    .header__container {
+        .mobile-item1 {
+            width: 30px;
+        }
+        .mobile-item2 {
+            width: 35px;
+        }
+    }
+    .collaborators__logos-wrapper {
+        img {
+            width: 130px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .collaborators {
+        display: none;
+    }
+    .header__container {
+        .mobile-item1 {
+            width: 20px;
+        }
+        .mobile-item2 {
+            width: 25px;
+        }
+    }
 }
