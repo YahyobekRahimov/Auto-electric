@@ -74,13 +74,20 @@ a {
   color: black;
 }
 
+button {
+  background-color: #fff;
+  border: none;
+}
 // Codes that can be shared across selectors with extend.
 
-%after-arrow-for-dropdown {
+.after-arrow-for-dropdown::after {
   content: '';
-  width: 16px;
-  height: 16px;
-  transform: rotate(-90deg); 
-  border: 5px solid $clr-text-gray-700;
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg); 
+  border: 3px solid $clr-text-gray-700;
   border-color: transparent $clr-text-gray-700 $clr-text-gray-700 transparent;
+  position: absolute;
+  bottom: 5px;
+  right: -18px;
 }
