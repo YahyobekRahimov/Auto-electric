@@ -1,7 +1,4 @@
-
-:root {
-  
-}
+// General styles
 
 * {
   padding: 0;
@@ -10,12 +7,80 @@
 }
 
 body {
- 
+    font-family: 'Golos Text', sans-serif;
 }
 
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 255px;
+  padding-right: 255px;
+}
+
+// Media queries for shrinking the padding of the container
+
+@media (max-width: 1920px) {
+  .container {
+    padding-left: 13.3vw;
+    padding-right: 13.3vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding-right: 4.9vw;
+    padding-left: 4.9vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding-right: 4vw;
+    padding-left: 4vw;
+  }
+}
+
+// General styles for specific elements
+
+h1 {
+  color: $clr-text-gray-900;
+  font-size: $fs-h1;
+  font-weight: $fw-h1;
+  line-height: 1.11em; 
+}
+
+h2 {
+  color: $clr-text-gray-800;
+  font-size: $fs-h2;
+  font-weight: $fw-h2;
+  line-height: 1.12em;
+}
+
+h3 {
+  color: $clr-text-gray-800;
+  font-size: $fs-h3;
+  font-weight: $fw-h3;
+  line-height: 1.09em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+// Codes that can be shared across selectors with extend.
+
+%after-arrow-for-dropdown {
+  content: '';
+  width: 16px;
+  height: 16px;
+  transform: rotate(-90deg); 
+  border: 5px solid $clr-text-gray-700;
+  border-color: transparent $clr-text-gray-700 $clr-text-gray-700 transparent;
 }
